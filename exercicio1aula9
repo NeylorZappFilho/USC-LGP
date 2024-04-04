@@ -1,0 +1,17 @@
+package Aula09;
+
+public class Exercicio01 {
+
+	public class Ex1Nomecompleto {
+
+		public static void main(String[] args) {
+			
+			String nome = "Neylor Marcelo Zapp Filho";
+			
+			String primeiroNome = nome.split(" ")[0];
+			
+			System.out.println(primeiroNome);
+
+		}
+	}
+}
