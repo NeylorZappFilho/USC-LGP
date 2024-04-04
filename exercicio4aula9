@@ -1,0 +1,35 @@
+package Aula10;
+import java.util.Scanner;
+public class Exercicio02 {
+	  public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+	        
+	        // Criando arrays para armazenar os nomes e notas dos alunos
+	        String[] nomes = new String[3];
+	        double[] notas1 = new double[3];
+	        double[] notas2 = new double[3];
+	        
+	        // Pedindo o nome e as notas para cada aluno
+	        for (int i = 0; i < nomes.length; i++) {
+	            System.out.println("Digite o nome do aluno " + (i+1) + ":");
+	            nomes[i] = scanner.nextLine();
+	            
+	            System.out.println("Digite a nota do primeiro bimestre do aluno " + (i+1) + ":");
+	            notas1[i] = scanner.nextDouble();
+	            
+	            System.out.println("Digite a nota do segundo bimestre do aluno " + (i+1) + ":");
+	            notas2[i] = scanner.nextDouble();
+	            
+	            scanner.nextLine(); // Limpar o buffer de entrada
+	        }
+	        
+	        // Imprimindo a média de cada aluno
+	        System.out.println("Médias dos alunos:");
+	        for (int i = 0; i < nomes.length; i++) {
+	            double media = (notas1[i] + notas2[i]) / 2;
+	            System.out.println("Aluno: " + nomes[i] + " - Média: " + media);
+	        }
+	        
+	        scanner.close();
+	    }
+	}
