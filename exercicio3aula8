@@ -1,0 +1,28 @@
+package Aula08;
+import java.util.Scanner;
+public class Exercicio03 {
+	 public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+	        
+	        System.out.print("Digite um número de 1 a 7 para representar um dia da semana: ");
+	        int numero = scanner.nextInt();
+	        
+	        switch (numero) {
+	            case 1:
+	            case 2:
+	            case 3:
+	            case 4:
+	            case 5:
+	                System.out.println("O número " + numero + " corresponde a um dia da semana.");
+	                break;
+	            case 6:
+	            case 7:
+	                System.out.println("O número " + numero + " corresponde a um final de semana.");
+	                break;
+	            default:
+	                System.out.println("Número inválido. Por favor, insira um número de 1 a 7.");
+	        }
+	        
+	        scanner.close();
+	    }
+}
