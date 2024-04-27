@@ -1,0 +1,90 @@
+package produtos;
+	import java.util.Scanner;
+	import java.util.List;
+	import java.util.ArrayList;
+
+	public class ProgramaEstoque {
+
+		private String nome;
+		private int quantidade;
+		private double preco;
+		
+	public ProgramaEstoque(String nome, int quantidade, double preco) {
+		this.nome = nome;
+		this.quantidade = quantidade;
+		this.preco = preco;
+	}
+		
+	public String toString() {
+		return "Item: " + nome + " Quantidade: " + quantidade + " Preço (R$): " + String.format("%.2f", preco);
+	}
+
+	public static class Estoque {
+		private List<ProgramaEstoque> itens = new ArrayList<>();
+		private Scanner scanner = new Scanner(System.in);
+		
+		public void iniciar() {
+			boolean executando = true;
+			
+			while (executando) {
+				System.out.println("\n Escolha uma opção: \n");
+				System.out.println(" 1 - Cadastrar Item ");
+				System.out.println(" 2 - Listar Itens ");
+				System.out.println(" 3 - Sair ");
+				int opcao = scanner.nextInt();
+				scanner.nextLine();
+				
+				switch(opcao) {
+				
+				case 1:
+					cadastrarItem();
+					break;
+				
+				case 2:
+					listarItens();
+					break;
+					
+				case 3:
+					executando = false;
+					break;
+					
+				default:
+					System.out.println(" Opção Inválida!");
+				}
+			}
+			scanner.close();	
+		}
+		
+		private void cadastrarItem() {
+			System.out.println("Nome do Item: ");
+			String nome = scanner.nextLine();
+			
+			System.out.println("Quantidade do item: ");
+			int quantidade = scanner.nextInt();
+			
+			System.out.println("Preço do item: ");
+			double preco = scanner.nextDouble();
+			
+			ProgramaEstoque item = new ProgramaEstoque(nome, quantidade, preco);
+			itens.add(item);
+			System.out.println("Item cadastrado com sucesso!");
+			}
+		
+		private void listarItens() {
+			
+			if(itens.isEmpty()) {
+				System.out.println("Nenhum item foi cadastrado.");
+			}else {
+				
+				for(ProgramaEstoque item: itens) {
+					System.out.println(item);
+				}
+			}
+		}
+
+		public static void main (String[] args) {
+			Estoque estoque = new Estoque();
+			estoque.iniciar();
+			}
+		}
+	}
