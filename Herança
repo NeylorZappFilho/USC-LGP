@@ -1,0 +1,13 @@
+import  ExercícioHerança . Carro ;
+import  ExercícioHerança . Moto ;
+
+ classe  pública Principal {
+    public  static  void  main ( String [] args ) {
+
+        Carro  carro = novo  Carro ( "Toyota" , "Corolla" , 4 );
+        Sistema . fora . println ( "Carro: " + carro . getMarca () + " " + carro . getModelo () + ", Número de Portas: " + carro . getNumeroPortas ());
+
+        Moto  moto = nova  Moto ( "Honda" , "CBR 1000RR" , 1000 );
+        Sistema . fora . println ( "Moto: " + moto .getMarca () + " " + moto . getModelo () + ", Cilindrada: " + moto . getCilindrada () + " cc" );
+    }
+}
