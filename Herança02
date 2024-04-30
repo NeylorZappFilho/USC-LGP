@@ -1,0 +1,16 @@
+public  class  Carro  estende  Veículo {
+ private  int  NumeroPortas ;
+
+ public  Carro ( String  marca , String  modelo , int  NumeroPortas ) {
+     super ( marca , modelo );
+     esse . NumeroPortas = NumeroPortas ;
+}
+
+ public  int  getNumeroPortas (){
+     retornar  NumeroPortas ;
+}
+
+ public  void  setNumeroPortas ( int  NumeroPortas ) {
+     esse . NumeroPortas = NumeroPortas ;
+}
+}
