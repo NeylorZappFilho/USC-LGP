@@ -1,0 +1,25 @@
+public  class  Veículo {
+     String  privada Marca ;
+    private  String  Modelo ;
+
+    public  Veiculo ( String  Marca , String  Modelo ) {
+        esse . Marca = Marca ;
+        esse . Modelo = Modelo ;
+    }
+
+    public  String  getMarca () {
+        retornar  Marca ;
+    }
+
+    public  void  setMarca ( String  Marca ) {
+        esse . Marca = Marca ;
+    }
+
+    public  String  getModelo (){
+        retornar  Modelo ;
+    }
+
+    public  void  setModelo ( String  Modelo ) {
+        esse . Modelo = Modelo ;
+    }
+}
