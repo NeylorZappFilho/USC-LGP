@@ -1,0 +1,16 @@
+classe  pública Moto  amplia  Veículo {
+    privado  int  Cilindrada ;
+
+    public  Moto ( String  Marca , String  Modelo , int  Cilindrada ) {
+        super ( Marca , Modelo );
+        esse . Cilindrada = Cilindrada ;
+    }
+
+    public  int  getCilindrada (){
+        retornar  Cilindrada ;
+    }
+
+    public  void  setCilindrada ( int  Cilindrada ) {
+        esse . Cilindrada = Cilindrada ;
+    }
+}
